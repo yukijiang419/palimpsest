@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e42eb6322474c3682b2861aa42a3b63, type: 3}
+  m_Name: NorthernWalksRecord
+  m_EditorClassIdentifier: Assembly-CSharp::Caffeine.Gameplay.Quests.MerchantQuestDefinition
+  <QuestId>k__BackingField: northern-walks-record
+  speaker: Merchant
+  title: Recover the Northern Walks record
+  destinationId: 
+  Puzzle:
+    rid: 5555647664672473498
+  coinReward: 25
+  arrivalRadius: 3
+  offer:
+  - The archive is also reconstructing incompatible biological and mechanical records.
+    Recover the Northern Walks record to find out why the process is continuing.
+  - Bring the final reference record back here. Your delivery will provide the last
+    verification needed for Old Arts, along with your next weapon and 25 coins.
+  inProgress:
+  - That explains the Residues. The System Garden Tower record shows how the archive
+    joined living things to machinery from other periods. Recover the Northern Walks
+    record so we can find out why it keeps going.
+  - Bring the final record back. I'll verify it for access to Old Arts and issue
+    your next weapon and 25 coins.
+  readyToTurnIn:
+  - You have the final record. Submit it for verification and collect your weapon
+    and 25 coins. Once verified, access to Old Arts will be authorised.
+  completed:
+  - All three records are verified. Every repair creates another conflict, so the
+    central corrective system starts again. It'll keep rebuilding the campus until
+    someone stops it.
+  - You're cleared to enter Old Arts. Reach the central corrective system and shut
+    it down so we can begin the recovery.
+  references:
+    version: 2
+    RefIds:
+    - rid: 5555647664672473498
+      type: {class: MerchantQuestDefinition/PuzzleStep, ns: Caffeine.Gameplay.Quests, asm: Assembly-CSharp}
+      data:
+        puzzleIndex: 3
+        title: Northern Walks record
+        displayName: Main Intersection Bridge
+        sceneName: MainIntersectionBridge
+        rewardWeapon: {fileID: 11400000, guid: 47a7d0ca7d81418685e898fea76de5c7, type: 2}
+        archiveRecord: Each correction creates another conflict. The central corrective
+          system responds by starting the reconstruction again, repeating the process
+          that is tearing the campus apart.

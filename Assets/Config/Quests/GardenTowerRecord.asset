@@ -1,0 +1,53 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e42eb6322474c3682b2861aa42a3b63, type: 3}
+  m_Name: GardenTowerRecord
+  m_EditorClassIdentifier: Assembly-CSharp::Caffeine.Gameplay.Quests.MerchantQuestDefinition
+  <QuestId>k__BackingField: garden-tower-record
+  speaker: Merchant
+  title: Recover the System Garden Tower record
+  destinationId: 
+  Puzzle:
+    rid: 5555647664672473497
+  coinReward: 0
+  arrivalRadius: 3
+  offer:
+  - The first record confirms that different periods are overlapping. Recover the
+    next reference record at the System Garden Tower so we can compare them.
+  - Enter through the open gate in the garden fence. Recover the record and return
+    here for verification and your next weapon.
+  inProgress:
+  - I've checked the Cussonia Court record. The archive is trying to rebuild several
+    versions of the same place at once, and we need the System Garden Tower record
+    to see how far the damage goes.
+  - Use the open gate in the garden fence. Bring the record back for verification
+    and your next weapon.
+  readyToTurnIn:
+  - You have the record. Submit it for verification and collect your weapon.
+  completed:
+  - That explains the Residues. The archive has joined living things to machinery
+    from other periods. Bring me the Northern Walks record so we can find out why
+    it keeps going.
+  references:
+    version: 2
+    RefIds:
+    - rid: 5555647664672473497
+      type: {class: MerchantQuestDefinition/PuzzleStep, ns: Caffeine.Gameplay.Quests, asm: Assembly-CSharp}
+      data:
+        puzzleIndex: 2
+        title: System Garden Tower record
+        displayName: Courtyard Wall Gap
+        sceneName: CourtyardWallGap
+        rewardWeapon: {fileID: 11400000, guid: 4ca64056e4164dfa9194203af8c4aeef, type: 2}
+        archiveRecord: The Residues are failed reconstructions. Incomplete biological
+          records have been joined to machinery and structures from other periods,
+          leaving parts that never belonged together in a single body.

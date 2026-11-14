@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c96186781284f30b9c263f31ccef048, type: 3}
+  m_Name: TwoHand2
+  m_EditorClassIdentifier: 
+  saveId: 47a7d0ca7d81418685e898fea76de5c7
+  weaponName: Two-Handed Sword 2
+  icon: {fileID: 21300000, guid: 66eef804fcd7991428fb7a9cedff67af, type: 3}
+  slot: 2
+  isTwoHanded: 1
+  damage: 50
+  range: 4
+  arcDegrees: 120
+  attackSpeed: 1

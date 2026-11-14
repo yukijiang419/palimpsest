@@ -1,0 +1,514 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca7388bc6031acd468b34e5a062e3b41, type: 3}
+  m_Name: GameplayConfig
+  m_EditorClassIdentifier: Caffeine.Gameplay::Caffeine.Gameplay.Config.GameplayConfig
+  <Simulation>k__BackingField:
+    <MazeTimeScale>k__BackingField: 0.3
+  <Player>k__BackingField:
+    <MaxHealth>k__BackingField: 100.05
+    <RespawnProtectionSeconds>k__BackingField: 3
+    <MoveSpeed>k__BackingField: 5.5
+    <AirControl>k__BackingField: 0.75
+    <SprintSpeed>k__BackingField: 8
+    <Acceleration>k__BackingField: 40
+    <Deceleration>k__BackingField: 30
+    <DashDistance>k__BackingField: 3
+    <DashDuration>k__BackingField: 0.2
+    <SlideLeanDegrees>k__BackingField: 10
+    <SlideLowering>k__BackingField: 0.08
+    <SlideRecoveryDuration>k__BackingField: 0.06
+    <MaxStamina>k__BackingField: 100
+    <DashStaminaCost>k__BackingField: 20
+    <SprintStaminaPerSecond>k__BackingField: 20
+    <StaminaRecoveryDelay>k__BackingField: 0.5
+    <StaminaRecoveryPerSecond>k__BackingField: 25
+  <Camera>k__BackingField:
+    <FollowTargetHeight>k__BackingField: 0.5
+    <FieldOfView>k__BackingField: 55
+    <HorizontalSensitivity>k__BackingField: 0.12
+    <VerticalSensitivity>k__BackingField: 0.002
+    <TopOrbit>k__BackingField: {x: 3.5, y: 4.5}
+    <MiddleOrbit>k__BackingField: {x: 1.4, y: 4.2}
+    <BottomOrbit>k__BackingField: {x: 0.3, y: 3.8}
+    <OcclusionDamping>k__BackingField: 0.35
+    <LockStartRange>k__BackingField: 20
+    <LockBreakRange>k__BackingField: 25
+    <LockOcclusionGrace>k__BackingField: 0.75
+    <LockSmoothTime>k__BackingField: 0.15
+    <LockMaxTurnSpeed>k__BackingField: 240
+    <LockDirectionMinimumDistance>k__BackingField: 0.5
+    <LockGroupFramingSize>k__BackingField: 0.8
+    <LockMaximumFieldOfView>k__BackingField: 65
+  <Attack>k__BackingField:
+    <Moves>k__BackingField:
+    - <DamageMultiplier>k__BackingField: 0.85
+      <RangeMultiplier>k__BackingField: 1
+      <ArcMultiplier>k__BackingField: 1
+      <AnimationSpeedMultiplier>k__BackingField: 1.3
+      <StaminaCost>k__BackingField: 0
+      <ImpactNormalizedTime>k__BackingField: 0
+      <TwoHandImpactNormalizedTime>k__BackingField: 0
+      <ChainDelay>k__BackingField: 0.14
+      <PulseCount>k__BackingField: 1
+      <PulseInterval>k__BackingField: 0.075
+      <StepDistance>k__BackingField: 0
+    - <DamageMultiplier>k__BackingField: 1.05
+      <RangeMultiplier>k__BackingField: 1
+      <ArcMultiplier>k__BackingField: 1
+      <AnimationSpeedMultiplier>k__BackingField: 1.3
+      <StaminaCost>k__BackingField: 0
+      <ImpactNormalizedTime>k__BackingField: 0
+      <TwoHandImpactNormalizedTime>k__BackingField: 0.55
+      <ChainDelay>k__BackingField: 0.14
+      <PulseCount>k__BackingField: 1
+      <PulseInterval>k__BackingField: 0.075
+      <StepDistance>k__BackingField: 0
+    - <DamageMultiplier>k__BackingField: 1.8
+      <RangeMultiplier>k__BackingField: 1.25
+      <ArcMultiplier>k__BackingField: 1.8
+      <AnimationSpeedMultiplier>k__BackingField: 1.3
+      <StaminaCost>k__BackingField: 0
+      <ImpactNormalizedTime>k__BackingField: 0
+      <TwoHandImpactNormalizedTime>k__BackingField: 0.62
+      <ChainDelay>k__BackingField: 0.14
+      <PulseCount>k__BackingField: 1
+      <PulseInterval>k__BackingField: 0.075
+      <StepDistance>k__BackingField: 0
+    - <DamageMultiplier>k__BackingField: 1.25
+      <RangeMultiplier>k__BackingField: 1.5
+      <ArcMultiplier>k__BackingField: 0.55
+      <AnimationSpeedMultiplier>k__BackingField: 1.65
+      <StaminaCost>k__BackingField: 12
+      <ImpactNormalizedTime>k__BackingField: 0.3
+      <TwoHandImpactNormalizedTime>k__BackingField: 0
+      <ChainDelay>k__BackingField: 0.14
+      <PulseCount>k__BackingField: 1
+      <PulseInterval>k__BackingField: 0.075
+      <StepDistance>k__BackingField: 3.5
+    - <DamageMultiplier>k__BackingField: 0.48
+      <RangeMultiplier>k__BackingField: 1
+      <ArcMultiplier>k__BackingField: 1
+      <AnimationSpeedMultiplier>k__BackingField: 1.8
+      <StaminaCost>k__BackingField: 18
+      <ImpactNormalizedTime>k__BackingField: 0.22
+      <TwoHandImpactNormalizedTime>k__BackingField: 0
+      <ChainDelay>k__BackingField: 0.38
+      <PulseCount>k__BackingField: 5
+      <PulseInterval>k__BackingField: 0.075
+      <StepDistance>k__BackingField: 0
+    - <DamageMultiplier>k__BackingField: 1
+      <RangeMultiplier>k__BackingField: 1
+      <ArcMultiplier>k__BackingField: 1
+      <AnimationSpeedMultiplier>k__BackingField: 1.3
+      <StaminaCost>k__BackingField: 22
+      <ImpactNormalizedTime>k__BackingField: 0.5
+      <TwoHandImpactNormalizedTime>k__BackingField: 0
+      <ChainDelay>k__BackingField: 0.14
+      <PulseCount>k__BackingField: 1
+      <PulseInterval>k__BackingField: 0.075
+      <StepDistance>k__BackingField: 0
+    <AnimationTimeout>k__BackingField: 2
+    <ComboInputWindow>k__BackingField: 2
+    <TwoHandPrecisionDamageMultiplier>k__BackingField: 2
+    <AttackImpactNormalizedTime>k__BackingField: 0.35
+    <ComboImpactNormalizedTimes>k__BackingField: []
+    <ComboResetDelay>k__BackingField: 0.5
+    <AttackBufferDuration>k__BackingField: 0.45
+    <AttackMoveSpeedMultiplier>k__BackingField: 0.45
+    <AttackSpeedCurve>k__BackingField:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0.8
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 0.18
+        value: 0.8
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 0.35
+        value: 1.5
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 0.48
+        value: 1.5
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 0.65
+        value: 0.9
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 0.9
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    <HitStopDuration>k__BackingField: 0.06
+    <HitFlashDuration>k__BackingField: 0.1
+    <HitStunDuration>k__BackingField: 0.32
+    <HitRecoilDistance>k__BackingField: 0.14
+    <HitRecoilDegrees>k__BackingField: 18
+    <HitRecoilDuration>k__BackingField: 0.3
+    <MeleeRange>k__BackingField: 2.5
+    <RushHitHalfWidth>k__BackingField: 0.6
+    <MeleeDamage>k__BackingField: 25
+    <MeleeArcDegrees>k__BackingField: 90
+  <Projectile>k__BackingField:
+    <Speed>k__BackingField: 12
+    <Lifetime>k__BackingField: 1.2
+  <Damage>k__BackingField:
+    <Recovery>k__BackingField:
+      <StageOneValue>k__BackingField: 25
+      <StageTwoValue>k__BackingField: 45
+      <StageTwoReduction>k__BackingField: 0.2
+      <StageTwoDuration>k__BackingField: 3
+    <PathDamage>k__BackingField:
+      <BreakShieldOnMaze>k__BackingField: 1
+      <StageOneValue>k__BackingField: 25
+      <StageTwoValue>k__BackingField: 40
+    <Control>k__BackingField:
+      <StageOneDuration>k__BackingField: 2
+      <StageTwoDuration>k__BackingField: 3.5
+      <StageTwoVulnerability>k__BackingField: 1.25
+    <Normal>k__BackingField:
+      <MinimumDamage>k__BackingField: 1
+      <ShieldDamageReduction>k__BackingField: 0.5
+  <Enemy>k__BackingField:
+    <RangedCount>k__BackingField: 0
+    <MeleeCount>k__BackingField: 1
+    <MaxHealth>k__BackingField: 35
+    <MaxShield>k__BackingField: 80
+    <MoveSpeed>k__BackingField: 3.2
+    <AggroRange>k__BackingField: 12
+    <DisengageRange>k__BackingField: 18
+    <DisengageDelay>k__BackingField: 3
+    <LeashRange>k__BackingField: 24
+    <PreferredRangeStart>k__BackingField: 6
+    <PreferredRangeEnd>k__BackingField: 9
+    <AttackInterval>k__BackingField: 0.9
+    <ProjectileDamage>k__BackingField: 8
+    <MeleeRangeStart>k__BackingField: 0.8
+    <MeleeRangeEnd>k__BackingField: 1.4
+    <MeleeDamage>k__BackingField: 12
+    <MeleeImpactNormalizedTime>k__BackingField: 0.5
+    <RangedRamRange>k__BackingField: 2.2
+    <RangedRamDamage>k__BackingField: 10
+    <CoinReward>k__BackingField: 10
+  <Boss>k__BackingField:
+    <HitRadius>k__BackingField: 1.9
+    <TurnSpeed>k__BackingField: 120
+    <ActivationRange>k__BackingField: 30
+    <JumpIn>k__BackingField: 1
+    <JumpInHeight>k__BackingField: 25
+    <JumpInFallTime>k__BackingField: 0.8
+    <IntroDuration>k__BackingField: 2.2
+    <AttackInterval>k__BackingField: 7
+    <AttackWindup>k__BackingField: 0.5
+    <PaperCount>k__BackingField: 4
+    <PaperRadius>k__BackingField: 1.3
+    <PaperSpread>k__BackingField: 10
+    <PaperSpacing>k__BackingField: 3.5
+    <WarningTime>k__BackingField: 1.5
+    <DropInterval>k__BackingField: 0.15
+    <PaperDamage>k__BackingField: 20
+    <PaperDropHeight>k__BackingField: 12
+    <BrokenExtraPaper>k__BackingField: 2
+    <BrokenAttackInterval>k__BackingField: 5
+    <RingRadius>k__BackingField: 7
+    <WallSegment>k__BackingField: 2.5
+    <WallHeight>k__BackingField: 2
+    <WallThickness>k__BackingField: 0.5
+    <SprayTime>k__BackingField: 1.2
+    <WallRiseTime>k__BackingField: 0.4
+    <WallLifetime>k__BackingField: 9
+    <WallDamage>k__BackingField: 12
+    <RingVolleys>k__BackingField: 3
+    <RingVolleyInterval>k__BackingField: 2.6
+    <RingVolleySize>k__BackingField: 5
+    <MeleeRange>k__BackingField: 2.5
+    <SlamRadius>k__BackingField: 2.2
+    <MeleeWindup>k__BackingField: 0.9
+    <MeleeDamage>k__BackingField: 18
+    <MeleeCooldown>k__BackingField: 3
+    <FirstSummonDelay>k__BackingField: 2
+    <NextWaveDelay>k__BackingField: 3
+    <MinionsPerSummon>k__BackingField: 3
+    <SummonWindup>k__BackingField: 0.6
+    <MinionKillsToBreakShield>k__BackingField: 6
+    <DissolveDelay>k__BackingField: 2.5
+  <PuzzlePush>k__BackingField:
+    <PushWalkSpeed>k__BackingField: 1.4
+    <GripSpeed>k__BackingField: 3
+    <FollowGain>k__BackingField: 30
+    <StuckDistance>k__BackingField: 0.15
+    <MinReach>k__BackingField: 0.5
+    <PalmThickness>k__BackingField: 0.04
+    <AlignSpeed>k__BackingField: 3
+    <ReleaseDistance>k__BackingField: 3.5
+    <SearchHeight>k__BackingField: 0.8
+    <SearchRadius>k__BackingField: 2.4
+    <FacingThreshold>k__BackingField: 0.15
+    <GripDistance>k__BackingField: 1.35
+    <BodyClearance>k__BackingField: 0.05
+  <Coin>k__BackingField:
+    <PrewarmCount>k__BackingField: 200
+    <MaxCreatesPerFrame>k__BackingField: 8
+    <MaxSpawnsPerFrame>k__BackingField: 20
+    <MaxInactive>k__BackingField: 512
+    <MaxPieces>k__BackingField: 10
+    <SpawnHeight>k__BackingField: 0.8
+    <ScatterSpeed>k__BackingField: 1
+    <PopSpeed>k__BackingField: 2.5
+    <Gravity>k__BackingField: 20
+    <HoverHeight>k__BackingField: 0.25
+    <SpinDegreesPerSecond>k__BackingField: 180
+    <PickupDelay>k__BackingField: 0.5
+    <MagnetRadius>k__BackingField: 3
+    <MagnetSpeed>k__BackingField: 12
+    <CollectDistance>k__BackingField: 0.5
+  <FeedbackAudio>k__BackingField:
+    <MusicVolume>k__BackingField: 0.3
+    <MusicCrossfadeSeconds>k__BackingField: 1.5
+    <MenuVolumeMultiplier>k__BackingField: 0.45
+    <MenuFadeSpeed>k__BackingField: 2
+    <MusicStateInterval>k__BackingField: 0.2
+    <CombatMusicHoldSeconds>k__BackingField: 2
+    <NavigationVolumeMultiplier>k__BackingField: 0.5
+    <NavigationInterval>k__BackingField: 0.05
+    <CoinInterval>k__BackingField: 0.06
+    <CoinPitch>k__BackingField: {x: 0.97, y: 1.03}
+    <CombatPitch>k__BackingField: {x: 0.95, y: 1.05}
+    <CombatMinDistance>k__BackingField: 10
+    <CombatMaxDistance>k__BackingField: 50
+    <CombatVolumes>k__BackingField:
+    - 0.65
+    - 0.8
+    - 0.65
+    - 0.9
+    - 0.65
+    - 0.4
+    - 0.45
+    - 0.65
+    - 0.3
+    - 0.6
+    <CombatIntervals>k__BackingField:
+    - 0.04
+    - 0.04
+    - 0.04
+    - 0.04
+    - 0.12
+    - 0.65
+    - 0.12
+    - 0.04
+    - 0.25
+    - 0.04
+    <Navigate>k__BackingField: {fileID: 8300000, guid: 086540110fa05904b9cb39b625667366, type: 3}
+    <Confirm>k__BackingField: {fileID: 8300000, guid: c641bb8231954e04396bf3373f3e7d8f, type: 3}
+    <Open>k__BackingField: {fileID: 8300000, guid: 64608051848883047aa3064871973da7, type: 3}
+    <Close>k__BackingField: {fileID: 8300000, guid: 7486fd87d7141724a9118b36b7758159, type: 3}
+    <Purchase>k__BackingField: {fileID: 8300000, guid: 81d9f48e444b06b4cbc5b4ca3b371e26, type: 3}
+    <Reject>k__BackingField: {fileID: 8300000, guid: 5f3bce6d5744381478a2a8bb9a77ac2c, type: 3}
+    <Coins>k__BackingField:
+    - {fileID: 8300000, guid: cded2ba7c3a2bf443b24634380b1ff6a, type: 3}
+    - {fileID: 8300000, guid: 50fa1b3f327666344b1f5325542f2c93, type: 3}
+    <UiVolume>k__BackingField: 0.4
+    <CoinVolume>k__BackingField: 0.55
+  <Maze>k__BackingField:
+    <BoardSize>k__BackingField: 5
+    <ObstacleCount>k__BackingField: 4
+    <StageOneThreshold>k__BackingField: 3
+    <StageTwoThreshold>k__BackingField: 5
+    <StartRange>k__BackingField: 11
+    <BreakRange>k__BackingField: 14
+    <PersonalCooldown>k__BackingField: 6
+    <GestureThreshold>k__BackingField: 24
+  <UI>k__BackingField:
+    <RecoveryColor>k__BackingField: {r: 0.2, g: 0.85, b: 0.58, a: 1}
+    <DamageColor>k__BackingField: {r: 1, g: 0.59, b: 0.16, a: 1}
+    <ControlColor>k__BackingField: {r: 0.45, g: 0.38, b: 1, a: 1}
+    <MinimapWorldRadius>k__BackingField: 60
+    <MinimapRefreshRate>k__BackingField: 10
+    <FullMapTextureSize>k__BackingField: 2048
+    <FullMapPadding>k__BackingField: 0.05
+    <NeutralColor>k__BackingField: {r: 0.35, g: 0.35, b: 0.35, a: 1}
+    <AimLineColor>k__BackingField: {r: 0.35, g: 0.82, b: 1, a: 0.95}
+    <MazeLinkColor>k__BackingField: {r: 0.68, g: 0.48, b: 1, a: 0.95}
+    <AimLineWidth>k__BackingField: 0.045
+    <AimLineLength>k__BackingField: 8
+    <MazeLinkWidth>k__BackingField: 0.065
+    <WorldLineHeight>k__BackingField: 0.7
+    <TokenOutlineThickness>k__BackingField: 2
+    <BoardCellSize>k__BackingField: 58
+    <BoardSpacing>k__BackingField: 5
+    <BoardPadding>k__BackingField: 15
+    <BoardOffset>k__BackingField: {x: -30, y: -30}
+    <CellEmptyColor>k__BackingField: {r: 0.06, g: 0.15, b: 0.14, a: 0.55}
+    <CellStartColor>k__BackingField: {r: 0.09, g: 0.22, b: 0.21, a: 0.8}
+    <CellObstacleColor>k__BackingField: {r: 0.03, g: 0.08, b: 0.08, a: 0.78}
+    <CellVisitedColor>k__BackingField: {r: 0.12, g: 0.32, b: 0.29, a: 0.88}
+    <EntangleColor>k__BackingField: {r: 0.68, g: 0.48, b: 1, a: 1}
+    <EntangleWidth>k__BackingField: 0.055
+    <EntangleRadius>k__BackingField: 0.72
+    <EntangleHeight>k__BackingField: 1.7
+    <EntangleTurns>k__BackingField: 2.5
+    <EntangleSegments>k__BackingField: 40
+  <Quests>k__BackingField:
+    <OverviewTransitionSeconds>k__BackingField: 0.8
+    <OverviewFlyoverSeconds>k__BackingField: 8
+    <OverviewStopSeconds>k__BackingField: 0.1
+    <OverviewHeight>k__BackingField: 26
+    <OverviewLookAhead>k__BackingField: 8
+    <BossSceneName>k__BackingField: BossArena
+    <Definitions>k__BackingField:
+    - {fileID: 11400000, guid: 86e99a5625214341980bbeebf061ce7c, type: 2}
+    - {fileID: 11400000, guid: e74c33b55ccf4b69a2571c4e1a13461a, type: 2}
+    - {fileID: 11400000, guid: 21f93e0982c94bda9b1a86586f8b6e4f, type: 2}
+    <ArrowHeight>k__BackingField: 2.5
+    <ArrowFloatAmplitude>k__BackingField: 0.2
+    <ArrowFloatSpeed>k__BackingField: 2
+    <ArrowRotateSpeed>k__BackingField: 60
+  <Shop>k__BackingField:
+    WeaponDamage:
+      amountPerLevel: 5
+      basePrice: 10
+      pricePerLevel: 10
+      maxLevel: 5
+    MaxHealth:
+      amountPerLevel: 20
+      basePrice: 15
+      pricePerLevel: 10
+      maxLevel: 5
+    MaxStamina:
+      amountPerLevel: 20
+      basePrice: 15
+      pricePerLevel: 10
+      maxLevel: 5
+    MazeRecovery:
+      amountPerLevel: 0.2
+      basePrice: 20
+      pricePerLevel: 10
+      maxLevel: 5
+    MazeControl:
+      amountPerLevel: 0.2
+      basePrice: 20
+      pricePerLevel: 10
+      maxLevel: 5
+  <Encounters>k__BackingField:
+    SquadsPerRound: 020000000300000005000000
+    Formation:
+    - offset: {x: -2.8, y: 0, z: -2.5}
+      type: 1
+    - offset: {x: 2.8, y: 0, z: -2.5}
+      type: 1
+    - offset: {x: 0, y: 0, z: -5}
+      type: 1
+    - offset: {x: 0, y: 0, z: 3.5}
+      type: 0
+    - offset: {x: 3.5, y: 0, z: 5}
+      type: 2
+  <Boundary>k__BackingField:
+    PlayableOutline:
+    - {x: -52, y: -16}
+    - {x: 218, y: -16}
+    - {x: 218, y: 210}
+    - {x: 156, y: 258}
+    - {x: 105, y: 263}
+    - {x: 85, y: 263}
+    - {x: 85, y: 243}
+    - {x: 50, y: 243}
+    - {x: 50, y: 250}
+    - {x: 26, y: 263}
+    - {x: -14, y: 263}
+    - {x: -14, y: 356}
+    - {x: -54, y: 358}
+    - {x: -65, y: 350}
+    - {x: -84, y: 332}
+    - {x: -84, y: 302}
+    - {x: -78, y: 280}
+    - {x: -44, y: 278}
+    - {x: -39, y: 263}
+    - {x: -23, y: 263}
+    - {x: -62, y: 263}
+    - {x: -62, y: 195}
+    - {x: -37, y: 195}
+    - {x: -37, y: 128}
+    - {x: -52, y: 128}
+    ReturnOutsideMargin: 3
+    BlockerHeight: 3
+    BlockerThickness: 0.6
+    FadeOutSeconds: 0.35
+    HoldSeconds: 0.15
+    FadeInSeconds: 0.5
+  <Story>k__BackingField:
+    openingSequence: {fileID: 4960835882804398265, guid: c41db7d490fdbeb42a319d16e45fb6e3, type: 3}
+    tutorialGuide: {fileID: 11400000, guid: 28beff0a02a8d1c4f9bf612bff850879, type: 2}
+    puzzleTutorialGuide: {fileID: 11400000, guid: 8887727c53f54967b39b770b4c770a86, type: 2}
+    combatTutorialGuide: {fileID: 11400000, guid: 988ab4562f2ee7b4887ec852c7a3859f, type: 2}
+    ending: The reconstruction has stopped. The campus is stable. Fragments of other
+      eras remain among its buildings. Recovery will begin around them.
+    BlendStart: 0.4
+    BlendEnd: 0.82
+    FirstFadeInSeconds: 1.2
+    FadeInSeconds: 0.55
+    FadeOutSeconds: 0.55
+    VideoPrepareTimeout: 30
+  <TemporalHints>k__BackingField:
+    ApproachDistance: 5
+    PulseSeconds: 0.8
+  <Effects>k__BackingField:
+    <ShiftSeconds>k__BackingField: 0.8
+    <ShiftRadius>k__BackingField: 6
+    <SurfaceWidth>k__BackingField: 0.65
+    <ShiftParticles>k__BackingField: 20
+    <PastColor>k__BackingField: {r: 1, g: 0.57, b: 0.26, a: 1}
+    <PresentColor>k__BackingField: {r: 0.35, g: 0.67, b: 1, a: 1}
+    <FutureColor>k__BackingField: {r: 0.68, g: 0.43, b: 1, a: 1}
+    <ShieldHitSeconds>k__BackingField: 0.22
+    <ShieldBreakSeconds>k__BackingField: 0.55
+    <ShieldBreakParticles>k__BackingField: 24
+    <ShieldColor>k__BackingField: {r: 0.3, g: 0.85, b: 1, a: 1}
+    <SeatSeconds>k__BackingField: 0.4
+    <SeatParticles>k__BackingField: 16
+    <RepairSeconds>k__BackingField: 0.6
