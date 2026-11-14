@@ -1,83 +1,83 @@
-# Palimpsest
+# Palimpsest（重写之卷）
 
-A single-player 3D third-person action game with environmental timeline puzzles, set on a distorted University of Melbourne Parkville campus 150 years in the future. Built in Unity 6.3 for WebGL by a team of three as the second project for COMP30019 Graphics and Interaction at the University of Melbourne (2026).
+一款单人 3D 第三人称动作游戏，结合环境时间线解谜。故事发生在 150 年后、被时空扭曲的墨尔本大学 Parkville 校区。本项目使用 Unity 6.3 开发、发布为 WebGL 网页版，是墨尔本大学 COMP30019 Graphics and Interaction 课程（2026）的三人团队项目。
 
-**▶ Play in the browser:** _link coming soon_
+**▶ 在线试玩：** _链接即将更新_
 
-![Concept art](docs/images/concept.png)
+![概念图](docs/images/concept.png)
 
-## The Game
+## 游戏简介
 
-A spatial archive accident has made past, present and future versions of the campus overlap. As a recovery operative, the player:
+一场空间档案事故让校园的过去、现在与未来版本重叠在一起。玩家扮演一名回收特工，需要：
 
-- **Fights Residues**: furniture-shaped enemies (Desk Crawlers, Vending Machines, Microscopes) protected by shields. Melee combos, Rush Slash, Rapid Cuts and a ranged Judgment Cut all trade off against stamina used for dodging.
-- **Uses Path Interaction under pressure**: holding right-click slows time and opens a 5×5 grid on the target. Drawing a path through Recovery, Damage and Control nodes heals the player, strips the enemy's shield or binds it, while enemies keep attacking.
-- **Solves timeline puzzles**: three enemy-free areas where pushing construction blocks in the Past rebuilds stairs, walls and bridges in the Future and Present.
-- **Defeats the Printer Boss**: a corrupted archive printer in Old Arts, with summoned minion waves, paper-rain and paper-wall attacks.
+- **击败残留体（Residues）**：由校园家具变成的敌人（爬行书桌、自动售货机、显微镜），每个都带有护盾。普通连招、冲刺斩、连续斩和远程审判斩都要消耗体力，和闪避共用同一份资源，需要取舍。
+- **在压力下使用路径交互（Path Interaction）**：按住右键后时间变慢，目标身上展开一个 5×5 网格。玩家画出一条经过恢复、伤害、控制节点的路径，分别可以回血、击碎敌人护盾或定身敌人，而敌人在这期间仍会继续攻击。
+- **解开时间线谜题**：三个没有敌人的独立区域。在“过去”推动建筑构件，就能在“未来”和“现在”重建楼梯、墙洞和桥梁。
+- **击败打印机 Boss**：位于 Old Arts 的失控档案打印机，会召唤小怪波次、降下纸张雨、筑起纸墙包围玩家。
 
-Progress, weapons, coins and shop upgrades persist across scenes and are saved to the browser's IndexedDB.
+进度、武器、金币和商店升级在各场景之间保留，并自动保存到浏览器的 IndexedDB。
 
-## My Contributions (Xiaoqi Jiang)
+## 我的贡献（Xiaoqi Jiang）
 
-- **Enemy system**: enemy behaviour, gravity, swing armour and squad tuning. Replaced the original enemies with the campus-furniture characters and added the **Printer Boss**.
-- **Boss Room**: built the Boss arena scene, the Boss fight (shield phase, minion waves, paper rain, paper-wall ring, close-range slam) and the Old Arts entrance.
-- **Weapons and economy**: weapon system with two slots and four weapon variants, coin drops and coin HUD, the merchant NPC and the upgrade shop that persists across puzzle scenes, weapon icons and an `O`-key stats panel.
-- **Player character**: smoothed movement and attack animation; replaced the player body with the rigged Hooded Swordsman.
-- **Puzzle UX**: puzzle tutorial, live hint bar and block-pushing animation.
-- **Shield shader**: extended an HLSL shield shader with a low-shield warning and a noise-based break dissolve (details below).
-- **Production**: kept the project under the 250 MB asset limit, maintained the game design document, and wrote the user-evaluation plan, questionnaire and evaluation report.
+- **敌人系统**：敌人行为、重力、霸体和小队数量调校；把原来的敌人替换成校园家具角色，并新增**打印机 Boss**。
+- **Boss 房**：搭建 Boss 竞技场场景，实现 Boss 战全流程（护盾阶段、小怪波次、纸张雨、纸墙环、近身重击）以及 Old Arts 入口。
+- **武器与经济系统**：双武器槽、四种武器变体；金币掉落与金币 HUD；商人 NPC 和跨解谜场景保留的升级商店；商店与 HUD 中的武器图标，以及按 `O` 打开的武器属性面板。
+- **玩家角色**：优化移动和攻击动画的流畅度；把玩家模型换成绑定好骨骼的兜帽剑士。
+- **解谜体验**：解谜教程、实时提示栏和推箱子动画。
+- **护盾 shader**：在 HLSL 护盾 shader 上新增低护盾警告和基于噪声的破碎溶解效果（详见下文）。
+- **项目管理**：把资源文件夹控制在 250 MB 限制以内；维护游戏设计文档（GDD）；编写用户评估计划、问卷和评估报告。
 
-### Shield Shader
+### 护盾 Shader
 
-Source: [ShieldShader.shader](Assets/Shaders/ShieldShader.shader) · Controller: [ShieldVisual.cs](Assets/Scripts/Combat/ShieldVisual.cs)
+源码：[ShieldShader.shader](Assets/Shaders/ShieldShader.shader) · 控制脚本：[ShieldVisual.cs](Assets/Scripts/Combat/ShieldVisual.cs)
 
-The shield is an additive shell with a Fresnel rim, clipped at a height equal to the remaining shield, with a bright waterline and sliding droplets. Playtesters found it hard to tell whether a shield was still active, so I added two state cues:
+护盾是一个叠加混合的外壳，边缘带菲涅尔光。外壳会按剩余护盾比例从高处裁切，裁切线是一条明亮的水位线，下方有水滴滑落。测试玩家反映很难看出护盾是否还在，所以我加了两种状态提示：
 
-- **Low-shield warning**: below 50% the rim blends from blue to red (fully red at 30%) using `smoothstep`, and the shell flickers like a failing light. The flicker samples value noise over time and sharpens it into on/off steps.
-- **Break dissolve**: when the shield breaks, two layers of 3D value noise burn the dome away over one second with a glowing edge. Gameplay protection ends at the moment of the break, not after the effect.
+- **低护盾警告**：护盾低于 50% 时，边缘颜色用 `smoothstep` 从蓝色渐变到红色，30% 时完全变红；同时外壳会像接触不良的灯一样闪烁。闪烁是随时间采样值噪声，再锐化成开/关两种状态得到的。
+- **破碎溶解**：护盾被击碎时，用两层 3D 值噪声在一秒内把外壳“烧掉”，烧蚀边缘会发光。护盾的保护在击碎那一刻就结束，不会等特效播完。
 
-| Full shield | Low-shield warning |
+| 满护盾 | 低护盾警告 |
 | --- | --- |
-| ![Shield at 75%](docs/images/shield-75.png) | ![Shield at 33%](docs/images/shield-33.png) |
+| ![75% 护盾](docs/images/shield-75.png) | ![33% 护盾](docs/images/shield-33.png) |
 
-| Warning flicker | Break dissolve |
+| 警告闪烁 | 破碎溶解 |
 | --- | --- |
-| ![Low-shield warning](docs/images/warning.gif) | ![Shield dissolve](docs/images/dissolve.gif) |
+| ![低护盾警告](docs/images/warning.gif) | ![护盾溶解](docs/images/dissolve.gif) |
 
-## Team
+## 团队分工
 
-| Member | Main areas |
+| 成员 | 主要负责 |
 | --- | --- |
-| Binglin Li | Campus environment, menus/HUD/dialogue/shop UI, quests and story presentation, target lock, audio integration, Tree Wind and glitch-lighting shaders |
-| Yiming Zheng | Timeline puzzles, sword combos and special attacks, Judgment Cut shader and particle effects, trailer |
-| Xiaoqi Jiang | Enemies and Boss, Boss Room, weapons, coins, merchant and shop, player character, shield shader |
+| Binglin Li | 校园环境；菜单、HUD、对话和商店界面；任务与剧情呈现；目标锁定；音频整合；树木摆动和故障光照 shader |
+| Yiming Zheng | 时间线谜题；剑技连招和特殊攻击；审判斩 shader 与粒子特效；宣传片 |
+| Xiaoqi Jiang | 敌人与 Boss；Boss 房；武器、金币、商人与商店；玩家角色；护盾 shader |
 
-![Judgment Cut shader by Yiming Zheng](docs/images/judgement-cut-comparison.gif)
+![Yiming Zheng 制作的审判斩 shader](docs/images/judgement-cut-comparison.gif)
 
-## Repository Contents
+## 仓库内容
 
-This repository is a code showcase, not the complete Unity project.
+本仓库用于展示代码，不是完整的 Unity 工程。
 
-| Path | Contents |
+| 路径 | 内容 |
 | --- | --- |
-| [Assets/Scripts](Assets/Scripts) | C# gameplay code: combat, enemies and Boss, Path Interaction (`Maze`), puzzles, quests, persistence, UI |
-| [Assets/Shaders](Assets/Shaders) | HLSL shaders: shield, Judgment Cut, tree wind and glitch lighting |
-| [Assets/Config](Assets/Config) | Gameplay tuning, weapon and quest data |
-| [Assets/Plugins/WebGL](Assets/Plugins/WebGL) | Browser save (IndexedDB) and pointer-lock bridges |
-| [docs/images](docs/images) | Screenshots and design images |
+| [Assets/Scripts](Assets/Scripts) | C# 玩法代码：战斗、敌人与 Boss、路径交互（`Maze`）、解谜、任务、存档、界面 |
+| [Assets/Shaders](Assets/Shaders) | HLSL shader：护盾、审判斩、树木摆动、故障光照等 |
+| [Assets/Config](Assets/Config) | 玩法数值、武器和任务数据 |
+| [Assets/Plugins/WebGL](Assets/Plugins/WebGL) | 浏览器存档（IndexedDB）和鼠标锁定的 JavaScript 桥接 |
+| [docs/images](docs/images) | 截图和设计图 |
 
-Third-party art, animation and audio are **not included** because their licences (Unity Asset Store EULA, Adobe Mixamo) do not allow redistribution of source files, so the project will not open as a playable scene from this repository alone. The browser build above contains the full game.
+第三方美术、动画和音频**没有包含在本仓库中**，因为它们的许可证（Unity Asset Store EULA、Adobe Mixamo）不允许分发源文件，所以仅凭本仓库无法打开可游玩的场景。完整游戏请通过上方的在线试玩链接体验。
 
-## Credits
+## 素材署名
 
-- Player character: Pigcraft, [White Hooded Assassin with Red Belt](https://sketchfab.com/3d-models/white-hooded-assassin-with-red-belt-c7ad4bc7b6d64df8a03243e9839939ac), [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/); rigged through Adobe Mixamo and modified
-- Animations: Kevin Iglesias, [Human Melee Animations FREE](https://assetstore.unity.com/packages/3d/animations/human-melee-animations-free-165785); Adobe Mixamo
-- Merchant character: Adobe Mixamo
-- Swords: BLINK, [FREE - Low Poly Swords](https://assetstore.unity.com/packages/3d/props/weapons/free-low-poly-swords-rpg-weapons-198166); coins: Devtoid, [Gold Coins](https://assetstore.unity.com/packages/3d/props/gold-coins-1810)
-- Music: SRG774, [Dark Sci-Fi Audio Pack](https://opengameart.org/content/dark-sci-fi-audio-pack) (CC0); Blackvoid6, [Cyberpunk Action Music Pack](https://blackvoid6.itch.io/cyberpunk-action-music-pack) (CC BY 4.0)
-- Sound effects: Kenney, marcelofg55 and Ogrebane (CC0)
-- Textures and props: Poly Haven, Quaternius and Kenney (CC0)
-- Fonts: Adobe Source Serif 4 and IBM Plex (SIL OFL)
-- AI assistance was used for the campus model, enemy models, selected UI artwork and parts of the code and documentation.
+- 玩家角色：Pigcraft，[White Hooded Assassin with Red Belt](https://sketchfab.com/3d-models/white-hooded-assassin-with-red-belt-c7ad4bc7b6d64df8a03243e9839939ac)，[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)；通过 Adobe Mixamo 绑定骨骼并做了修改
+- 动画：Kevin Iglesias，[Human Melee Animations FREE](https://assetstore.unity.com/packages/3d/animations/human-melee-animations-free-165785)；Adobe Mixamo
+- 商人角色：Adobe Mixamo
+- 剑：BLINK，[FREE - Low Poly Swords](https://assetstore.unity.com/packages/3d/props/weapons/free-low-poly-swords-rpg-weapons-198166)；金币：Devtoid，[Gold Coins](https://assetstore.unity.com/packages/3d/props/gold-coins-1810)
+- 音乐：SRG774，[Dark Sci-Fi Audio Pack](https://opengameart.org/content/dark-sci-fi-audio-pack)（CC0）；Blackvoid6，[Cyberpunk Action Music Pack](https://blackvoid6.itch.io/cyberpunk-action-music-pack)（CC BY 4.0）
+- 音效：Kenney、marcelofg55、Ogrebane（CC0）
+- 贴图与道具：Poly Haven、Quaternius、Kenney（CC0）
+- 字体：Adobe Source Serif 4、IBM Plex（SIL OFL）
+- 校园模型、敌人模型、部分界面美术以及部分代码和文档使用了 AI 辅助。
 
-© 2026 Binglin Li, Yiming Zheng and Xiaoqi Jiang. All rights reserved. The code is published for portfolio viewing only.
+© 2026 Binglin Li、Yiming Zheng、Xiaoqi Jiang，保留所有权利。代码仅供作品展示浏览。
