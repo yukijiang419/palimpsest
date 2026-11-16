@@ -8,8 +8,6 @@
 
 [![Palimpsest 演示视频](https://img.youtube.com/vi/ODcsN_qIRAg/maxresdefault.jpg)](https://youtu.be/ODcsN_qIRAg)
 
-![概念图](docs/images/concept.png)
-
 ## 游戏简介
 
 一场空间档案事故让校园的过去、现在与未来版本重叠在一起。玩家扮演一名回收特工，需要：
@@ -20,6 +18,8 @@
 - **击败打印机 Boss**：位于 Old Arts 的失控档案打印机，会召唤小怪波次、降下纸张雨、筑起纸墙包围玩家。
 
 进度、武器、金币和商店升级在各场景之间保留，并自动保存到浏览器的 IndexedDB。
+
+![概念图](docs/images/concept.png)
 
 ## 我的贡献（Xiaoqi Jiang）
 
