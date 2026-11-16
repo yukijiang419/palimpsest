@@ -2,7 +2,9 @@
 
 一款单人 3D 第三人称动作游戏，结合环境时间线解谜。故事发生在 150 年后、被时空扭曲的墨尔本大学 Parkville 校区。本项目使用 Unity 6.3 开发、发布为 WebGL 网页版，是墨尔本大学 COMP30019 Graphics and Interaction 课程（2026）的三人团队项目。
 
-**▶ 在线试玩：** _链接即将更新_
+**▶ 演示视频：** [YouTube](https://youtu.be/ODcsN_qIRAg)
+
+[![Palimpsest 演示视频](https://img.youtube.com/vi/ODcsN_qIRAg/maxresdefault.jpg)](https://youtu.be/ODcsN_qIRAg)
 
 ![概念图](docs/images/concept.png)
 
@@ -66,7 +68,7 @@
 | [Assets/Plugins/WebGL](Assets/Plugins/WebGL) | 浏览器存档（IndexedDB）和鼠标锁定的 JavaScript 桥接 |
 | [docs/images](docs/images) | 截图和设计图 |
 
-第三方美术、动画和音频**没有包含在本仓库中**，因为它们的许可证（Unity Asset Store EULA、Adobe Mixamo）不允许分发源文件，所以仅凭本仓库无法打开可游玩的场景。完整游戏请通过上方的在线试玩链接体验。
+第三方美术、动画和音频**没有包含在本仓库中**，因为它们的许可证（Unity Asset Store EULA、Adobe Mixamo）不允许分发源文件，所以仅凭本仓库无法打开可游玩的场景。实际游玩效果请观看上方的演示视频。
 
 ## 素材署名
 
