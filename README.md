@@ -23,12 +23,18 @@
 
 ## 我的贡献（Xiaoqi Jiang）
 
-- **敌人系统**：敌人行为、重力、霸体和小队数量调校；把原来的敌人替换成校园家具角色，并新增**打印机 Boss**。
-- **Boss 房**：搭建 Boss 竞技场场景，实现 Boss 战全流程（护盾阶段、小怪波次、纸张雨、纸墙环、近身重击）以及 Old Arts 入口。
-- **武器与经济系统**：双武器槽、四种武器变体；金币掉落与金币 HUD；商人 NPC 和跨解谜场景保留的升级商店；商店与 HUD 中的武器图标，以及按 `O` 打开的武器属性面板。
-- **玩家角色**：优化移动和攻击动画的流畅度；把玩家模型换成绑定好骨骼的兜帽剑士。
-- **解谜体验**：解谜教程、实时提示栏和推箱子动画。
-- **护盾 shader**：在 HLSL 护盾 shader 上新增低护盾警告和基于噪声的破碎溶解效果（详见下文）。
+- **敌人系统**：敌人行为、重力、霸体和小队数量调校；把原来的敌人替换成校园家具角色，并新增**打印机 Boss**。<br>
+  代码：[`EnemyController.cs`](Assets/Scripts/Enemy/EnemyController.cs) · [`EnemySystem.cs`](Assets/Scripts/Enemy/EnemySystem.cs) · [`EnemyScanBeam.cs`](Assets/Scripts/Enemy/EnemyScanBeam.cs)
+- **Boss 房**：搭建 Boss 竞技场场景，实现 Boss 战全流程（护盾阶段、小怪波次、纸张雨、纸墙环、近身重击）以及 Old Arts 入口。<br>
+  代码：[`BossController.cs`](Assets/Scripts/Enemy/BossController.cs) · [`BossLaser.shader`](Assets/Shaders/BossLaser.shader) · [`PuzzleEntrance.cs`](Assets/Scripts/Puzzles/PuzzleEntrance.cs)
+- **武器与经济系统**：双武器槽、四种武器变体；金币掉落与金币 HUD；商人 NPC 和跨解谜场景保留的升级商店；商店与 HUD 中的武器图标，以及按 `O` 打开的武器属性面板。<br>
+  代码：[`WeaponManager.cs`](Assets/Scripts/Combat/WeaponManager.cs) · [`WeaponData.cs`](Assets/Scripts/Combat/WeaponData.cs) · [`CoinPickup.cs`](Assets/Scripts/Player/CoinPickup.cs) · [`PlayerWallet.cs`](Assets/Scripts/Player/PlayerWallet.cs) · [`Merchant.cs`](Assets/Scripts/NPC/Merchant.cs) · [`PlayerHudPresenter.cs`](Assets/Scripts/UI/HUD/PlayerHudPresenter.cs)
+- **玩家角色**：优化移动和攻击动画的流畅度；把玩家模型换成绑定好骨骼的兜帽剑士。<br>
+  代码：[`PlayerAnimator.cs`](Assets/Scripts/Player/PlayerAnimator.cs) · [`PlayerMoveController.cs`](Assets/Scripts/Player/PlayerMoveController.cs)
+- **解谜体验**：解谜教程、实时提示栏和推箱子动画。<br>
+  代码：[`PuzzleHintPresenter.cs`](Assets/Scripts/Puzzles/PuzzleHintPresenter.cs) · [`PuzzleBlockPusher.cs`](Assets/Scripts/Puzzles/PuzzleBlockPusher.cs)
+- **护盾 shader**：在 HLSL 护盾 shader 上新增低护盾警告和基于噪声的破碎溶解效果（详见下文）。<br>
+  代码：[`ShieldShader.shader`](Assets/Shaders/ShieldShader.shader) · [`ShieldVisual.cs`](Assets/Scripts/Combat/ShieldVisual.cs)
 - **项目管理**：把资源文件夹控制在 250 MB 限制以内；维护游戏设计文档（GDD）；编写用户评估计划、问卷和评估报告。
 
 ### 护盾 Shader
