@@ -1,6 +1,6 @@
 # Palimpsest（重写之卷）
 
-一款单人 3D 第三人称动作游戏，结合环境时间线解谜。故事发生在 150 年后、被时空扭曲的墨尔本大学 Parkville 校区。本项目使用 Unity 6.3 开发、发布为 WebGL 网页版，是墨尔本大学 COMP30019 Graphics and Interaction 课程（2026）的三人团队项目。
+一款单人 3D 第三人称动作游戏，结合环境时间线解谜。故事发生在 150 年后、被时空扭曲的墨尔本大学 Parkville 校区。本项目使用 Unity 6.3 开发、发布为 WebGL 网页版，由三人团队于 2026 年完成。
 
 **▶ 在线试玩：** [yukijiang419.github.io/palimpsest-play](https://yukijiang419.github.io/palimpsest-play/)（建议使用桌面版 Chrome 或 Edge，首次加载约 95 MB）
 
